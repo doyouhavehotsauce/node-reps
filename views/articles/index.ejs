@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Blog</title>
+</head>
+<style>
+    .blog-card{
+        border: 1px solid #ececec;
+        margin: 15px 0;
+    }
+    .btn{
+        padding: 10px 30px;
+        border-radius: 8px;
+        text-decoration: none;
+    }
+    .success{
+        background: seagreen;
+        color: white;
+    }
+</style>
+<body>
+    <div>
+        <h1>Blog Articles</h1>
+        <a href="/articles/new" class="btn success">New Article</a>
+        <% articles.forEach(article => { %>
+            <div class="blog-card">
+                <h3><%= article.title %></h3>
+                <p><%= article.createdAt.toLocaleDateString() %></p>
+                <p><%= article.description %></p>
+            </div>
+        <% }) %>
+    </div>
+</body>
+</html>

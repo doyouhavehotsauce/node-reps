@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Blog</title>
+</head>
+<style>
+    .blog-card{
+        border: 1px solid #ececec;
+        margin: 15px 0;
+    }
+    .btn{
+        padding: 10px 30px;
+        border-radius: 8px;
+        text-decoration: none;
+    }
+    .success{
+        background: seagreen;
+        color: white;
+    }
+</style>
+<body>
+    <div>
+        <h1>New Article</h1>
+        <form action="/articles" method="POST">
+            <%- include('_form_fields') %>
+        </form>
+    </div>
+</body>
+</html>
